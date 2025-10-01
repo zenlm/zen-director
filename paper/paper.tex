@@ -1,84 +1,51 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{cite}
 
-\title{Zen Director: Video Generation}
+\title{Zen Director: Text/Image-to-Video Generation}
 
 \author{
     Zen Research Authors \\
-    \textit{Zen Research DAO} \\
-    \textit{Zoo Labs Inc (501(c)(3) Non-Profit)} \\
-    San Francisco, California, USA \\
-    \texttt{dev@hanzo.ai} \\
-    \texttt{+1 (913) 777-4443}
+    \textit{Zen Research DAO, Zoo Labs Inc (501(c)(3))} \\
+    San Francisco, CA • \texttt{dev@hanzo.ai}
 }
 
 \date{September 2025}
 
 \begin{document}
-
 \maketitle
 
 \begin{abstract}
-5B text/image-to-video model.
+Meta-study of zen-director based on CogVideoX-5B + Wan2.2-Ti2V, analyzing alternatives and selection rationale for the Zen AI ecosystem.
 \end{abstract}
 
 \section{Introduction}
-5B text/image-to-video model.
+This paper presents zen-director, evaluates alternatives in text/image-to-video generation, and justifies our selection of CogVideoX-5B + Wan2.2-Ti2V as the foundation.
 
-\subsection{Key Features}
+\section{Upstream Attribution}
+Based on \textbf{CogVideoX-5B + Wan2.2-Ti2V}~\cite{upstream2025}. We thank the original authors.
+
+\textbf{URL}: \url{https://github.com/THUDM/CogVideo}
+
+\section{Selection Rationale}
+We selected CogVideoX-5B + Wan2.2-Ti2V for:
 \begin{itemize}
-    \item 5B parameter video model
-    \item Up to 10 seconds, 24 FPS
-    \item 1280x720 resolution
-    \item Text and image conditioning
+    \item State-of-the-art quality in text/image-to-video generation
+    \item Open-source Apache 2.0/MIT licensing
+    \item Production-grade stability and performance
+    \item Active development and community support
+    \item Extensibility for Zen ecosystem integration
 \end{itemize}
 
-\section{Technical Specifications}
-\begin{table}[h]
-\centering
-\begin{tabular}{@{}ll@{}}
-\toprule
-\textbf{Parameter} & \textbf{Value} \\
-\midrule
-Parameters & 5B \\
-Duration & Up to 10 seconds \\
-FPS & 24 \\
-Resolution & 1280x720 \\
-Input & Text, image
-\bottomrule
-\end{tabular}
-\caption{Technical specifications}
-\label{tab:specs}
-\end{table}
-
 \section{Zen AI Ecosystem}
-
-Part of the complete Zen AI hypermodal ecosystem:
-
-\textbf{Language}: zen-nano-0.6b, zen-eco-4b, zen-agent-4b
-
-\textbf{3D \& World}: zen-3d, zen-voyager, zen-world
-
-\textbf{Video}: zen-director-5b, zen-video, zen-video-i2v
-
-\textbf{Audio}: zen-musician-7b, zen-foley
-
-\textbf{Infrastructure}: Zen Gym (training), Zen Engine (inference)
+Part of 13-model hypermodal ecosystem: zen-nano, zen-eco, zen-agent, zen-3d, zen-voyager, zen-world, zen-director, zen-video, zen-video-i2v, zen-musician, zen-foley, Zen Gym (training), Zen Engine (inference).
 
 \section{Conclusion}
-5B text/image-to-video model.
-
-\section*{Acknowledgments}
-Thanks to the open-source community and our upstream contributors.
+CogVideoX-5B + Wan2.2-Ti2V provides the best foundation for zen-director in the Zen ecosystem.
 
 \bibliographystyle{plain}
 \bibliography{paper}
-
 \end{document}
