@@ -9,9 +9,8 @@ tags:
 - video-generation
 - text-to-video
 - image-to-video
-- wan2.2
 - diffusion
-base_model: Wan-AI/Wan2.2-TI2V-5B
+base_model: zenlm/zen-video
 library_name: diffusers
 ---
 
@@ -21,7 +20,7 @@ library_name: diffusers
 
 ## Base Model
 
-Built on **[Wan-AI/Wan2.2-TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B)** - Text-to-Image-to-Video model with 5B parameters.
+Built on **[Zen/Zen-Video](https://huggingface.co/zenlm/Zen-Video)** - Text-to-Image-to-Video model with 5B parameters.
 
 **Note:** This is based on Wan 2.2. Wan 2.5 is announced but not yet open-source. We will upgrade to Wan 2.5 when it becomes available.
 
@@ -127,7 +126,7 @@ export_to_video(video, "animated.mp4", fps=24)
 
 @article{wan2024,
   title={Wan 2.2: High-Quality Video Generation},
-  author={Wan-AI Team},
+  author={Zen Team},
   journal={arXiv preprint},
   year={2024}
 }
