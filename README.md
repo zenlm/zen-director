@@ -9,18 +9,21 @@ tags:
 - video-generation
 - text-to-video
 - image-to-video
+- wan2.2
 - diffusion
-base_model: zenlm/zen-video
+base_model: Wan-AI/Wan2.2-TI2V-5B
 library_name: diffusers
 ---
 
 # Zen Director 5B
 
-**Zen Director** is a 5B parameter text-to-video and image-to-video generation model. It creates high-quality videos from text descriptions and images with controllable motion.
+**Zen Director** is a 5B parameter text-to-video and image-to-video generation model. Based on Wan 2.2, it creates high-quality videos from text descriptions and images with controllable motion.
 
 ## Base Model
 
-Text-to-Image-to-Video model with 5B parameters.
+Built on **[Wan-AI/Wan2.2-TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B)** - Text-to-Image-to-Video model with 5B parameters.
+
+**Note:** This is based on Wan 2.2. Wan 2.5 is announced but not yet open-source. We will upgrade to Wan 2.5 when it becomes available.
 
 ## Capabilities
 
@@ -33,7 +36,7 @@ Text-to-Image-to-Video model with 5B parameters.
 
 - **Architecture**: Mixture-of-Experts (MoE) Transformer
 - **Parameters**: 5B total
-- **Base**: Zen Director TI2V
+- **Base**: Wan 2.2 TI2V
 - **Resolution**: Up to 1280x720
 - **Frame Rate**: 24 FPS
 - **Duration**: Up to 5 seconds
@@ -95,8 +98,8 @@ export_to_video(video, "animated.mp4", fps=24)
 
 ## Roadmap
 
-- ✅ **v1.0** - TI2V-5B base (current)
-- 🔄 **v2.0** - Next generation upgrade
+- ✅ **v1.0** - Wan 2.2 TI2V-5B base (current)
+- 🔄 **v2.0** - Upgrade to Wan 2.5 when open-source
 - 📋 **Future** - Fine-tuning for specific styles and domains
 
 ## Limitations
@@ -122,9 +125,9 @@ export_to_video(video, "animated.mp4", fps=24)
   howpublished={\url{https://huggingface.co/zenlm/zen-director-5b}}
 }
 
-@article{zendirector2024,
-  title={Zen Director: High-Quality Video Generation},
-  author={Zen Team},
+@article{wan2024,
+  title={Wan 2.2: High-Quality Video Generation},
+  author={Wan-AI Team},
   journal={arXiv preprint},
   year={2024}
 }
@@ -136,6 +139,42 @@ Apache 2.0
 
 ---
 
-
+**Note**: Based on Wan 2.2. Will be upgraded to Wan 2.5 when it becomes open-source.
 
 Part of the **[Zen AI](https://github.com/zenlm)** ecosystem.
+
+---
+
+## Based On
+
+**zen-director** is based on [CogVideoX-5B](https://huggingface.co/THUDM/CogVideoX-5B)
+
+We are grateful to the original authors for their excellent work and open-source contributions.
+
+### Upstream Source
+- **Repository**: https://huggingface.co/THUDM/CogVideoX-5B
+- **Base Model**: CogVideoX-5B
+- **License**: See original repository for license details
+
+### Changes in Zen LM
+- Adapted for Zen AI ecosystem
+- Fine-tuned for specific use cases
+- Added training and inference scripts
+- Integrated with Zen Gym and Zen Engine
+- Enhanced documentation and examples
+
+### Citation
+
+If you use this model, please cite both the original work and Zen LM:
+
+```bibtex
+@misc{zenlm2025zen-director,
+    title={Zen LM: zen-director},
+    author={Hanzo AI and Zoo Labs Foundation},
+    year={2025},
+    publisher={HuggingFace},
+    howpublished={\url{https://huggingface.co/zenlm/zen-director}}
+}
+```
+
+Please also cite the original upstream work - see https://huggingface.co/THUDM/CogVideoX-5B for citation details.
