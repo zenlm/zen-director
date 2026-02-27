@@ -20,9 +20,7 @@ library_name: diffusers
 
 ## Base Model
 
-Built on **[Zen/Zen-Video](https://huggingface.co/zenlm/Zen-Video)** - Text-to-Image-to-Video model with 5B parameters.
-
-
+Text-to-Image-to-Video model with 5B parameters.
 
 ## Capabilities
 
